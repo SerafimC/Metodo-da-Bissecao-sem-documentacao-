@@ -51,7 +51,7 @@ double calcRoot(closed_interval *c1){
     printf("%d\n", n);
 
     for(i = 0; i <= n; i++){// Executará N interações de acordo com o Erro absoluto calculado;
-        c = ((c1->a + c1->b)/ 2); // C torna-se termo intermediár
+        c = ((c1->a + c1->b)/ 2); // C torna-se termo intermediário
 
         if(functionF(c) == 0){ //Verifica se a raiz da função não é Zero
             return c;
@@ -60,7 +60,7 @@ double calcRoot(closed_interval *c1){
             c1->b = c;
             printf("C1 F(x) : [%f, %f]\n", c1->a, c1->b);
         }
-            else if(((functionF(c1->a)) * (functionF(c))) > 0){// Verifica se a raiz esta o intervalo [c, b]. Condição F(b)*F(c) > 0
+            else if(((functionF(c1->a)) * (functionF(c))) > 0){// Verifica se a raiz esta o intervalo [c, b]. Condição F(b)*F(c) < 0
             c1->a = c;
             printf("C1 F(x) : [%f, %f]\n", c1->a, c1->b);
         }
